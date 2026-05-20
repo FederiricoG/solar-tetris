@@ -650,7 +650,7 @@
             // dxInput represents horizontal sliding, dzInput represents forward/backward sliding
             const targetMove = new THREE.Vector3()
                 .addScaledVector(dirs.right, dxInput)
-                .addScaledVector(dirs.forward, -dzInput); // Up arrow moves block in Forward direction (opposite to cameras looking back vector)
+                .addScaledVector(dirs.forward, dzInput); // Up arrow moves block in Forward direction (along camera's snapped forward vector)
             
             const nextX = activeBlock.x + Math.round(targetMove.x);
             const nextZ = activeBlock.z + Math.round(targetMove.z);
