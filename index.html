@@ -1018,6 +1018,12 @@
             window.addEventListener('keydown', (e) => {
                 if (isGameOver) return;
                 
+                // Prevent default scrolling/actions for game control keys
+                const keysToPrevent = ['arrowup', 'arrowdown', 'arrowleft', 'arrowright', ' ', 'enter'];
+                if (keysToPrevent.includes(e.key.toLowerCase())) {
+                    e.preventDefault();
+                }
+                
                 switch (e.key.toLowerCase()) {
                     // Sliding (Camera-relative)
                     case 'w':
