@@ -15,8 +15,8 @@ The workshop yielded two primary reflections on the future of architectural prac
 ### 💡 The Architect's Custom Knowledge Base
 AI models and agents are only as powerful as the context they operate within. To harness AI effectively, architects must transition from prompt-writers to system architects who build and maintain their own **custom knowledge bases** (comprising localized building codes, material libraries, detail templates, and historical design guidelines).
 
-### 🔄 Designing Buildings as Systems
-During the workshop, all students executed the **exact same prompt** under a deterministic framework. Yet, the AI agents produced slightly different, localized variations of the 3D Solar Tetris application. This variance highlights a key shift: AI allows architects to move away from drawing static objects toward **designing buildings as parametric systems**. By defining rules (e.g., solar exposure, grid alignments, export criteria) instead of fixed forms, architects can use AI to explore vast, performative solution spaces.
+### 🔄 AI as a Generative System Engine
+During the workshop, all students executed the **exact same prompt** under a deterministic framework. Yet, the AI agents produced slightly different, localized variations of the 3D Solar Tetris application. This variance highlights a key shift: AI operates not as a static drawing tool, but as a generative system engine. By defining programmatic rules and constraints (e.g., solar exposure, grid alignments, export criteria) rather than static geometry, architects can direct AI agents to dynamically generate, iterate, and optimize within vast, performative solution spaces.
 
 ---
 
