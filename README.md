@@ -8,12 +8,15 @@ This repository was created in the context of the Sommersemester 2026 elective m
 
 ## 1. Educational & Pedagogical Context
 
-This project represents the outcome of a 90-minute workshop introducing architecture students to the practical, system-level application of AI agents in design. During the session, students set up the **[Antigravity IDE](https://antigravity.google)** agent harness and executed hands-on experiments, injecting a structured prompt to construct a functional 3D Solar Tetris application in a single standalone HTML file.
+This project represents the outcome of a 90-minute workshop introducing architecture students to the practical, system-level application of AI agents in design. During the session, students set up the **[Antigravity IDE](https://antigravity.google)** agent harness, walked through the **[Presentation Slides](replication/slides.html)**, and executed hands-on experiments, injecting a structured prompt to construct a functional 3D Solar Tetris application in a single standalone HTML file.
 
 The workshop yielded two primary reflections on the future of architectural practice and AI integration:
 
 ### 💡 The Architect's Custom Knowledge Base
 AI models and agents are only as powerful as the context they operate within. To harness AI effectively, architects must transition from prompt-writers to system architects who build and maintain their own **custom knowledge bases** (comprising localized building codes, material libraries, detail templates, and historical design guidelines).
+
+### 📂 Methodology & Framework
+The structured file and prompting approach used in this workshop is based on the **Interpreted Context Methodology (ICM)**, an open-source AI alignment framework developed by **[Jake van Clief](https://github.com/RinDig/Interpreted-Context-Methdology)**.
 
 ### 🔄 AI as a Generative System Engine
 During the workshop, all students executed the **exact same prompt** under a deterministic framework. Yet, the AI agents produced slightly different, localized variations of the 3D Solar Tetris application. This variance highlights a key shift: AI operates not as a static drawing tool, but as a generative system engine. By defining programmatic rules and constraints (e.g., solar exposure, grid alignments, export criteria) rather than static geometry, architects can direct AI agents to dynamically generate, iterate, and optimize within vast, performative solution spaces.
@@ -87,5 +90,6 @@ If you want to host your own official link:
 ## 5. Replication Protocol
 
 If you want to replicate or extend the application, explore the resources in the **[`replication/`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication)** folder:
+* **[`slides.html`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/slides.html)**: The presentation slides used during the workshop (*Toward Agentic AI in Architecture*).
 * **[`system_prompt.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/system_prompt.md)**: The system instructions fed to the AI.
 * **[`specifications.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/specifications.md)**: The mathematical matrices, coordinate systems, and DXF specs.

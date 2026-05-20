@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toward Agentic AI in Architecture</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            font-size: 120%; /* 20% bigger globally */
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #060609;
+            color: #F8FAFC;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass {
+            background: rgba(13, 13, 23, 0.65);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-6 md:p-12 overflow-hidden select-none">
+
+    <!-- Top Header -->
+    <header class="flex justify-between items-center border-b border-white/5 pb-4 max-w-6xl mx-auto w-full">
+        <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 text-[9px] font-bold tracking-widest uppercase bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">Hochschule AI Studio</span>
+            <span class="text-xs text-zinc-500 font-medium">Toward Agentic AI in Architecture</span>
+        </div>
+        <div class="text-xs text-zinc-400 font-semibold mono" id="slide-counter">1 / 5</div>
+    </header>
+
+    <!-- Slides Container -->
+    <main class="flex-grow flex items-center justify-center max-w-6xl mx-auto w-full py-8">
+
+        <!-- SLIDE 1: Title -->
+        <section class="slide active flex-col justify-center space-y-6 w-full text-center md:text-left">
+            <div class="max-w-3xl space-y-4">
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-400 mono">// Keynote Introduction</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Toward <span class="bg-gradient-to-r from-emerald-400 to-indigo-400 bg-clip-text text-transparent">Agentic AI</span> in Architecture
+                </h1>
+                <p class="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
+                    Moving beyond static imagery to rule-based morphological negotiation, voxel simulation, and structured databases.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 pt-6 text-xs text-zinc-500 border-t border-white/5 w-full justify-between">
+                <div>Speaker: Federico Giacomarra (<span class="mono text-zinc-400">federicogiacomarra@gmail.com</span>)</div>
+                <div class="mono">Use Arrow Keys or Space to Navigate</div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: ML vs LLM & Hallucinations -->
+        <section class="slide flex-col space-y-8 w-full">
+            <div class="space-y-2">
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-400 mono">// Foundation</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">ML vs. LLMs & The Physics of Hallucinations</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                <div class="glass p-6 rounded-2xl space-y-3">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span class="text-indigo-400 font-bold">01/</span> Traditional ML vs. LLMs
+                    </h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed font-light">
+                        <strong>Machine Learning (ML):</strong> Specialized mathematical models trained on specific datasets for single-focus tasks (e.g., concrete crack detection, cost prediction).<br><br>
+                        <strong>Large Language Models (LLMs):</strong> General cognitive engines. Trained on semantics to write, reason, generate code, and synthesize complex multi-domain ideas out-of-the-box.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-2xl space-y-3">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span class="text-emerald-400 font-bold">02/</span> Why LLMs Hallucinate
+                    </h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed font-light">
+                        LLMs do not query a database of static truths. They are <strong>probabilistic token predictors</strong>—they predict the next most logical word based on context patterns.<br><br>
+                        <strong>The Cure: Grounding.</strong> By feeding the model verbatim source texts (e.g., BayBO building codes) and enforcing structural constraints, we bind its reasoning to reality.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Agentic Prompting -->
+        <section class="slide flex-col space-y-8 w-full">
+            <div class="space-y-2">
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-400 mono">// Prompt Engineering</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Rules of Agentic Prompting & Verification</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                <div class="glass p-6 rounded-xl space-y-3">
+                    <div class="text-xs font-bold text-indigo-400 mono">STEP 01</div>
+                    <h3 class="text-base font-bold text-white">Structured Output</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Design prompts to generate predictable, machine-readable structures (e.g., JSON schemas or markdown tables) instead of conversational paragraphs.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-xl space-y-3">
+                    <div class="text-xs font-bold text-emerald-400 mono">STEP 02</div>
+                    <h3 class="text-base font-bold text-white">Separation of Concerns</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Never ask a single prompt to do everything. Stack models dynamically: one for extracting facts, one for drafting layouts, one for describing experience.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-xl space-y-3">
+                    <div class="text-xs font-bold text-amber-400 mono">STEP 03</div>
+                    <h3 class="text-base font-bold text-white">Empirical Loops</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Treat AI output as testable hypotheses. Create feedback loops: <strong>Plan -> Execute -> Benchmark -> Refine</strong> to continuously trace and catch error loops.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Filesystem as Architecture -->
+        <section class="slide flex-col space-y-8 w-full">
+            <div class="space-y-2">
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-400 mono">// Systems Thinking</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Folders & Markdown: The Filesystem as Architecture</h2>
+            </div>
+            <div class="glass p-6 md:p-8 rounded-2xl space-y-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Case Study: Interpreted Context Methodology (ICM)</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Open-source framework by Jake van Clief (<a href="https://github.com/RinDig/Interpreted-Context-Methdology" class="text-emerald-400 hover:underline">RinDig/Interpreted-Context-Methdology</a>)</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-zinc-300">
+                    <div class="space-y-2">
+                        <strong class="text-white block font-semibold">1. Folders as Execution Stages</strong>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Organize pipelines into numbered folders (e.g., <code class="mono text-zinc-200">01_analysis/</code>). AI processes only the context files within that scope, minimizing noise.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <strong class="text-white block font-semibold">2. Markdown (.md) as State Storage</strong>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Plain-text markdown is lightweight, easily readable by LLMs, and formats headers, lists, and tables perfectly for context parsing.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <strong class="text-white block font-semibold">3. Human-in-the-Loop</strong>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Because states are stored on disk as files rather than database variables, developers can inspect, edit, or override any step instantly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Workshop Agenda -->
+        <section class="slide flex-col space-y-6 w-full">
+            <div class="space-y-2">
+                <span class="text-xs font-bold tracking-widest uppercase text-emerald-400 mono">// Today's Session</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Workshop Agenda</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="glass p-6 rounded-xl space-y-3 border-l-4 border-indigo-500">
+                    <span class="mono text-xs text-zinc-500 font-bold">00:00 - 00:45 | Core Concepts & The Antigravity IDE</span>
+                    <strong class="text-white block text-lg">The Agentic Paradigm Explained</strong>
+                    <p class="text-zinc-400 font-light leading-relaxed">
+                        Explaining the agentic workflow using the active <strong>AI Agent in the Antigravity IDE</strong> as our real-time case study. Understanding how an agent reads code, creates plans, runs commands, maintains directory state, and verifies its work. Bridging ML vs LLMs, grounding, and prompt design.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-xl space-y-3 border-l-4 border-emerald-500">
+                    <span class="mono text-xs text-zinc-500 font-bold">00:45 - 01:30 | 3D Solar Tetris Sandbox</span>
+                    <strong class="text-white block text-lg">Building & Customizing the App</strong>
+                    <p class="text-zinc-400 font-light leading-relaxed">
+                        Diving deep into the codebase of the 3D Solar Stacking application. Learning how to build and customize it: updating physics/keyboard controls, adding custom structural shapes, adjusting shadow tracing metrics, troubleshooting local/API settings, and programming custom CAD exports.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Controls -->
+    <footer class="flex justify-between items-center max-w-6xl mx-auto w-full pt-4 border-t border-white/5 text-xs text-zinc-500">
+        <div>Toward Agentic AI in Architecture</div>
+        <div class="flex gap-4">
+            <button onclick="prevSlide()" class="hover:text-white px-3 py-1.5 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition-all font-semibold">&larr; Prev</button>
+            <button onclick="nextSlide()" class="hover:text-white px-3 py-1.5 bg-zinc-900 rounded-lg hover:bg-zinc-800 transition-all font-semibold">Next &rarr;</button>
+        </div>
+    </footer>
+
+    <!-- Slide Navigation Engine -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    slide.style.display = 'flex';
+                } else {
+                    slide.classList.remove('active');
+                    slide.style.display = 'none';
+                }
+            });
+            document.getElementById('slide-counter').innerText = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Keyboard listeners for presentation feel
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'ArrowRight' || e.code === 'Space') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.code === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
