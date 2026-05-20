@@ -67,7 +67,7 @@ During the workshop, all students executed the **exact same prompt** under a det
 
 ### 🎮 Play Directly Online
 You can play and experiment with the application directly in your browser:
-* **[Play Live (via HTMLPreview)](https://htmlpreview.github.io/?https://github.com/FederiricoG/solar-tetris/blob/main/index.html)**
+* **[Play Live (via GitHack)](https://raw.githack.com/FederiricoG/solar-tetris/main/index.html)**
 
 ### 💻 Run Locally
 1. Ensure you have an active internet connection (to load Three.js and Tailwind via CDN).
