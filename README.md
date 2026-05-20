@@ -8,12 +8,12 @@ This repository was created in the context of the Sommersemester 2026 elective m
 
 ## 1. Educational & Pedagogical Context
 
-This project represents the outcome of a 90-minute workshop introducing architecture students to the practical, system-level application of AI agents in design. During the session, students set up the **Antigravity** agent harness and executed hands-on experiments, injecting a structured prompt to construct a functional 3D Solar Tetris application in a single standalone HTML file.
+This project represents the outcome of a 90-minute workshop introducing architecture students to the practical, system-level application of AI agents in design. During the session, students set up the **[Antigravity IDE](https://antigravity.google)** agent harness and executed hands-on experiments, injecting a structured prompt to construct a functional 3D Solar Tetris application in a single standalone HTML file.
 
 The workshop yielded two primary reflections on the future of architectural practice and AI integration:
 
 ### 💡 The Architect's Custom Knowledge Base
-AI models and agents are only as powerful as the context they operate within. To harness AI effectively, architects must transition from prompt-writers to system architects who build and maintain their own **custom knowledge bases** (comprising localized building codes, material libraries, detail templates, and historical design guidelines). This repository illustrates how a structured knowledge base acts as a foundation layer that allows AI tools to deliver precise, regulatory-compliant, and context-aware spatial outputs.
+AI models and agents are only as powerful as the context they operate within. To harness AI effectively, architects must transition from prompt-writers to system architects who build and maintain their own **custom knowledge bases** (comprising localized building codes, material libraries, detail templates, and historical design guidelines).
 
 ### 🔄 Designing Buildings as Systems
 During the workshop, all students executed the **exact same prompt** under a deterministic framework. Yet, the AI agents produced slightly different, localized variations of the 3D Solar Tetris application. This variance highlights a key shift: AI allows architects to move away from drawing static objects toward **designing buildings as parametric systems**. By defining rules (e.g., solar exposure, grid alignments, export criteria) instead of fixed forms, architects can use AI to explore vast, performative solution spaces.
