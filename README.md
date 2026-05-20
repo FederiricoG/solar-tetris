@@ -63,11 +63,29 @@ During the workshop, all students executed the **exact same prompt** under a det
 
 ---
 
-## 4. How to Run & Experiment
+## 4. How to Run & Play
 
-1. Ensure you have an active internet connection to download the Three.js and Tailwind CSS CDNs.
+### 🎮 Play Directly Online
+You can play and experiment with the application directly in your browser:
+* **[Play Live (via HTMLPreview)](https://htmlpreview.github.io/?https://github.com/FederiricoG/solar-tetris/blob/main/index.html)**
+
+### 💻 Run Locally
+1. Ensure you have an active internet connection (to load Three.js and Tailwind via CDN).
 2. Clone this repository or download the files.
-3. Open [index.html](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/index.html) directly in any modern web browser.
-4. If you want to replicate or extend the application, explore the resources in the **[`replication/`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication)** folder:
-   * **[`system_prompt.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/system_prompt.md)**: The system instructions fed to the AI.
-   * **[`specifications.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/specifications.md)**: The mathematical matrices, coordinate systems, and DXF specs.
+3. Open `index.html` directly in any web browser.
+
+### 🌐 Deploy Your Own Link (GitHub Pages)
+If you want to host your own official link:
+1. Go to the **Settings** tab of your repository on GitHub.
+2. Select **Pages** from the left sidebar.
+3. Under **Build and deployment > Source**, choose **Deploy from a branch**.
+4. Set the branch to **`main`** and the folder to **`/ (root)`**, then click **Save**.
+5. After a minute, your game will be live at `https://FederiricoG.github.io/solar-tetris/`!
+
+---
+
+## 5. Replication Protocol
+
+If you want to replicate or extend the application, explore the resources in the **[`replication/`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication)** folder:
+* **[`system_prompt.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/system_prompt.md)**: The system instructions fed to the AI.
+* **[`specifications.md`](file:///c:/Users/feder/.gemini/antigravity/vault/projects/solar_tetris/replication/specifications.md)**: The mathematical matrices, coordinate systems, and DXF specs.
