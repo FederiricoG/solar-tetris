@@ -920,7 +920,7 @@
         // --- 7. DXF EXPORTER ---
         
         function exportDXF() {
-            if (activeFaces.length === 0) {
+            if (frozenMap.size === 0) {
                 alert("No elements to export yet. Place some blocks first!");
                 return;
             }
@@ -965,38 +965,66 @@
                 new THREE.Vector3(0.5, 0.5, 0),
                 new THREE.Vector3(-0.5, 0.5, 0)
             ];
+
+            const dirs = [
+                { name: '+x', posOffset: [1.0, 0.5, 0.5], rot: [0, Math.PI/2, 0] },
+                { name: '-x', posOffset: [0.0, 0.5, 0.5], rot: [0, -Math.PI/2, 0] },
+                { name: '+y', posOffset: [0.5, 1.0, 0.5], rot: [-Math.PI/2, 0, 0] },
+                { name: '-y', posOffset: [0.5, 0.0, 0.5], rot: [Math.PI/2, 0, 0] },
+                { name: '+z', posOffset: [0.5, 0.5, 1.0], rot: [0, 0, 0] },
+                { name: '-z', posOffset: [0.5, 0.5, 0.0], rot: [0, Math.PI, 0] }
+            ];
             
-            activeFaces.forEach(face => {
-                const layer = face.status === 'sunlit' ? 'SUNLIGHT' : 'SHADOW';
+            frozenMap.forEach((voxel, key) => {
+                const { x, y, z } = voxel;
                 
-                // Retrieve vertices transformed into world coordinate space
-                const worldV = localVertices.map(lp => lp.clone().applyMatrix4(face.mesh.matrixWorld));
-                
-                dxf.push("0");
-                dxf.push("3DFACE");
-                dxf.push("8");
-                dxf.push(layer);
-                
-                // Swap Y and Z coordinates (map Z to CAD-Y, and Y to CAD-Z)
-                // Vertex 1
-                dxf.push("10"); dxf.push(worldV[0].x.toFixed(5));
-                dxf.push("20"); dxf.push(worldV[0].z.toFixed(5)); // CAD-Y is Z
-                dxf.push("30"); dxf.push(worldV[0].y.toFixed(5)); // CAD-Z is Y
-                
-                // Vertex 2
-                dxf.push("11"); dxf.push(worldV[1].x.toFixed(5));
-                dxf.push("21"); dxf.push(worldV[1].z.toFixed(5));
-                dxf.push("31"); dxf.push(worldV[1].y.toFixed(5));
-                
-                // Vertex 3
-                dxf.push("12"); dxf.push(worldV[2].x.toFixed(5));
-                dxf.push("22"); dxf.push(worldV[2].z.toFixed(5));
-                dxf.push("32"); dxf.push(worldV[2].y.toFixed(5));
-                
-                // Vertex 4
-                dxf.push("13"); dxf.push(worldV[3].x.toFixed(5));
-                dxf.push("23"); dxf.push(worldV[3].z.toFixed(5));
-                dxf.push("33"); dxf.push(worldV[3].y.toFixed(5));
+                dirs.forEach(d => {
+                    let isSunlit = false;
+                    for (let i = 0; i < activeFaces.length; i++) {
+                        if (activeFaces[i].voxelKey === key && activeFaces[i].dir === d.name) {
+                            if (activeFaces[i].status === 'sunlit') {
+                                isSunlit = true;
+                            }
+                            break;
+                        }
+                    }
+                    
+                    const layer = isSunlit ? 'SUNLIGHT' : 'SHADOW';
+                    
+                    const position = new THREE.Vector3(x + d.posOffset[0], y + d.posOffset[1], z + d.posOffset[2]);
+                    const euler = new THREE.Euler(d.rot[0], d.rot[1], d.rot[2]);
+                    const quaternion = new THREE.Quaternion().setFromEuler(euler);
+                    const scale = new THREE.Vector3(1, 1, 1);
+                    const matrix = new THREE.Matrix4().compose(position, quaternion, scale);
+
+                    const worldV = localVertices.map(lp => lp.clone().applyMatrix4(matrix));
+                    
+                    dxf.push("0");
+                    dxf.push("3DFACE");
+                    dxf.push("8");
+                    dxf.push(layer);
+                    
+                    // Swap Y and Z coordinates (map Z to CAD-Y, and Y to CAD-Z)
+                    // Vertex 1
+                    dxf.push("10"); dxf.push(worldV[0].x.toFixed(5));
+                    dxf.push("20"); dxf.push(worldV[0].z.toFixed(5)); // CAD-Y is Z
+                    dxf.push("30"); dxf.push(worldV[0].y.toFixed(5)); // CAD-Z is Y
+                    
+                    // Vertex 2
+                    dxf.push("11"); dxf.push(worldV[1].x.toFixed(5));
+                    dxf.push("21"); dxf.push(worldV[1].z.toFixed(5));
+                    dxf.push("31"); dxf.push(worldV[1].y.toFixed(5));
+                    
+                    // Vertex 3
+                    dxf.push("12"); dxf.push(worldV[2].x.toFixed(5));
+                    dxf.push("22"); dxf.push(worldV[2].z.toFixed(5));
+                    dxf.push("32"); dxf.push(worldV[2].y.toFixed(5));
+                    
+                    // Vertex 4
+                    dxf.push("13"); dxf.push(worldV[3].x.toFixed(5));
+                    dxf.push("23"); dxf.push(worldV[3].z.toFixed(5));
+                    dxf.push("33"); dxf.push(worldV[3].y.toFixed(5));
+                });
             });
             
             dxf.push("0"); dxf.push("ENDSEC");
