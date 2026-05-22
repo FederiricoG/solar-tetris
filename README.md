@@ -70,7 +70,7 @@ During the workshop, all students executed the **exact same prompt** under a det
 
 ### 🎮 Play Directly Online
 You can play and experiment with the application directly in your browser:
-* **[Play Live (via GitHack)](https://raw.githack.com/FedericoG/solar-tetris/main/index.html)**
+* **[Play Live (via GitHack)](https://raw.githack.com/FederiricoG/solar-tetris/main/index.html)**
 
 ### 💻 Run Locally
 1. Ensure you have an active internet connection (to load Three.js and Tailwind via CDN).
@@ -83,7 +83,7 @@ If you want to host your own official link:
 2. Select **Pages** from the left sidebar.
 3. Under **Build and deployment > Source**, choose **Deploy from a branch**.
 4. Set the branch to **`main`** and the folder to **`/ (root)`**, then click **Save**.
-5. After a minute, your game will be live at `https://FedericoG.github.io/solar-tetris/`!
+5. After a minute, your game will be live at `https://FederiricoG.github.io/solar-tetris/`!
 
 ---
 
